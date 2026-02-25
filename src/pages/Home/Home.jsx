@@ -112,69 +112,71 @@ const Home = () => {
     ];
 
     return (
-        <div className="home-container fade-in">
-            {/* Background Decoration */}
-            <div className="bg-blob blob-1"></div>
-            <div className="bg-blob blob-2"></div>
+        <>
+            <div className="home-container fade-in">
+                {/* Background Decoration */}
+                <div className="bg-blob blob-1"></div>
+                <div className="bg-blob blob-2"></div>
 
-            {/* Welcome Image Section */}
-            <section className="welcome-section">
-                <img src={bannerImg} alt="IVF Logo Banner" className="full-banner-img" />
-            </section>
+                {/* Welcome Image Section */}
+                <section className="welcome-section">
+                    <img src={bannerImg} alt="IVF Logo Banner" className="full-banner-img" />
+                </section>
 
-            {/* Hero Section */}
-            <section className="hero-simple">
-                <p className="subtitle">
-                    캠퍼스와 세상 속의 하나님 나라 운동
-                </p>
-                <p className="desc-small">
-                    하나님 나라의 가치를 따라 살아가는 따뜻한 학생들의 공동체입니다.<br />
-                    서로의 삶을 응원하며 함께 걷는 친구가 되어줄게요!
-                </p>
-            </section>
+                {/* Hero Section */}
+                <section className="hero-simple">
+                    <p className="subtitle">
+                        캠퍼스와 세상 속의 하나님 나라 운동
+                    </p>
+                    <p className="desc-small">
+                        하나님 나라의 가치를 따라 살아가는 따뜻한 학생들의 공동체입니다.<br />
+                        서로의 삶을 응원하며 함께 걷는 친구가 되어줄게요!
+                    </p>
+                </section>
 
-            {/* Activities Section */}
-            <section className="activities-v2">
-                <h2 className="section-title">주요 활동 소개</h2>
-                {activities.map((activity) => (
-                    <div key={activity.id} className="activity-block">
-                        <ImageSlider images={activity.images} badge={activity.badge} />
-                        <div className="content">
-                            <h3>{activity.title}</h3>
-                            <p>{activity.desc}</p>
-                            <ul className="detail-tags">
-                                {activity.tags.map((tag, i) => <li key={i}>{tag}</li>)}
-                            </ul>
+                {/* Activities Section */}
+                <section className="activities-v2">
+                    <h2 className="section-title">주요 활동 소개</h2>
+                    {activities.map((activity) => (
+                        <div key={activity.id} className="activity-block">
+                            <ImageSlider images={activity.images} badge={activity.badge} />
+                            <div className="content">
+                                <h3>{activity.title}</h3>
+                                <p>{activity.desc}</p>
+                                <ul className="detail-tags">
+                                    {activity.tags.map((tag, i) => <li key={i}>{tag}</li>)}
+                                </ul>
+                            </div>
                         </div>
+                    ))}
+                </section>
+
+                {/* Social Buttons */}
+                <section className="social-section">
+                    <h3 className="section-subtitle">더 많은 소식이 궁금하다면?</h3>
+                    <div className="social-links">
+                        <a href={instaUrl} target="_blank" rel="noopener noreferrer" className="social-btn instagram">
+                            <Instagram size={20} />
+                            <span>Instagram</span>
+                        </a>
+                        <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="social-btn kakao">
+                            <MessageCircle size={20} />
+                            <span>KakaoTalk</span>
+                        </a>
                     </div>
-                ))}
-            </section>
+                </section>
 
-            {/* Social Buttons */}
-            <section className="social-section">
-                <h3 className="section-subtitle">더 많은 소식이 궁금하다면?</h3>
-                <div className="social-links">
-                    <a href={instaUrl} target="_blank" rel="noopener noreferrer" className="social-btn instagram">
-                        <Instagram size={20} />
-                        <span>Instagram</span>
-                    </a>
-                    <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="social-btn kakao">
-                        <MessageCircle size={20} />
-                        <span>KakaoTalk</span>
-                    </a>
-                </div>
-            </section>
+                <div className="pb-fixed-spacer"></div>
+            </div>
 
-            <div className="pb-fixed-spacer"></div>
-
-            {/* Fixed Apply Button */}
+            {/* Fixed Apply Button - Moved outside of container to avoid transform/clip issues */}
             <div className="fixed-action-bar">
                 <a href={googleFormUrl} target="_blank" rel="noopener noreferrer" className="fixed-apply-btn">
                     <span>지금 지원하기</span>
                     <ExternalLink size={18} />
                 </a>
             </div>
-        </div>
+        </>
     );
 };
 
