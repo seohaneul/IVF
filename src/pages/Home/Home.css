@@ -43,7 +43,7 @@
 
 .hero-simple .subtitle {
     color: var(--primary-dark);
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     font-weight: 800;
     line-height: 1.4;
     padding: 0;
@@ -246,17 +246,29 @@
 
 .detail-tags {
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-wrap: nowrap;
+    gap: 6px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    /* IE/Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    padding-bottom: 2px;
+}
+
+.detail-tags::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
 }
 
 .detail-tags li {
     background: var(--primary-light);
     color: var(--primary);
-    font-size: 0.75rem;
-    padding: 6px 12px;
+    font-size: 0.72rem;
+    padding: 3px 8px;
     border-radius: var(--radius-sm);
     font-weight: 700;
+    white-space: nowrap;
 }
 
 /* Hero Subtitle Styling */
