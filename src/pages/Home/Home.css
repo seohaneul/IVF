@@ -10,16 +10,21 @@
 /* Hero */
 .hero-simple {
     text-align: center;
-    padding: 0 0 var(--spacing-md);
-    margin-top: -10px;
-    /* Bring closer to image */
+    padding: 4px 0 var(--spacing-md);
+}
+
+.hero-simple .desc-small {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-top: 10px;
 }
 
 /* Welcome Banner */
 .welcome-section {
     width: calc(100% + (var(--spacing-md) * 2));
-    margin: 0 calc(var(--spacing-md) * -1) var(--spacing-md);
-    /* Full bleed to top and sides */
+    margin: 0 calc(var(--spacing-md) * -1) 0;
+    /* Full bleed to top and sides (no bottom margin) */
 }
 
 .full-banner-img {

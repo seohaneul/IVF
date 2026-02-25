@@ -124,6 +124,10 @@ const Home = () => {
                 <p className="subtitle">
                     캠퍼스와 세상 속의 하나님 나라 운동
                 </p>
+                <p className="desc-small">
+                    하나님 나라의 가치를 따라 살아가는 학생들의 공동체 IVF입니다.<br />
+                    성경연구, 소그룹 교제, 사회 이슈 참여 등 다양한 활동을 통해 함께 성장합니다.
+                </p>
             </section>
 
             {/* Activities Section */}
