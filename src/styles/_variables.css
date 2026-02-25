@@ -1,16 +1,19 @@
 :root {
-    /* Colors - IVF Green Theme */
-    --primary: #1f603a;
-    /* IVF Logo Green */
-    --primary-light: #e8f5e9;
-    --primary-dark: #144229;
-    --secondary: #f4a261;
-    /* Warm Accent */
-    --background: #fdfdfd;
+    /* Colors - Friendlier IVF Green Theme */
+    --primary: #2e7d32;
+    /* Slightly brighter, friendlier green */
+    --primary-light: #f1f8e9;
+    --primary-dark: #1b5e20;
+    --secondary: #ffb74d;
+    /* Soft orange/yellow accent */
+    --accent-soft: #fff9c4;
+    /* Very soft yellow background element */
+    --background: #fafcfb;
+    /* Warmer off-white */
     --surface: #ffffff;
-    --text-main: #2c3e50;
-    --text-muted: #7f8c8d;
-    --border: #edf2f7;
+    --text-main: #2e3b2e;
+    --text-muted: #667c66;
+    --border: #e2e8e2;
 
     /* Spacing */
     --spacing-xs: 6px;
@@ -20,9 +23,10 @@
     --spacing-xl: 48px;
 
     /* Border Radius - Softer look */
-    --radius-sm: 12px;
-    --radius-md: 18px;
-    --radius-lg: 28px;
+    --radius-sm: 16px;
+    --radius-md: 24px;
+    --radius-lg: 32px;
+    --radius-full: 50px;
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);

@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
-import { Users, Heart, Coffee, Tent, Info, Camera, MessageCircle, Instagram, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Users, Heart, Coffee, Tent, Info, Camera, MessageCircle, Instagram, ExternalLink, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import './Home.css';
-import logo from '../../assets/images/ivf-logo-only.png';
 import bannerImg from '../../assets/images/activity-banner-new.png';
 import studyImg from '../../assets/images/activity-bible.png';
 import mtImg from '../../assets/images/activity-mt.png';
@@ -114,6 +113,10 @@ const Home = () => {
 
     return (
         <div className="home-container fade-in">
+            {/* Background Decoration */}
+            <div className="bg-blob blob-1"></div>
+            <div className="bg-blob blob-2"></div>
+
             {/* Welcome Image Section */}
             <section className="welcome-section">
                 <img src={bannerImg} alt="IVF Logo Banner" className="full-banner-img" />
