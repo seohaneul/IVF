@@ -1,0 +1,212 @@
+.home-container {
+    padding: var(--spacing-md);
+    max-width: 650px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+/* Hero */
+.hero-simple {
+    text-align: center;
+    padding: var(--spacing-md) 0;
+}
+
+.logo-main {
+    width: 140px;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-simple h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+}
+
+/* Welcome Banner */
+.welcome-section {
+    width: 100%;
+    margin: 0 calc(var(--spacing-md) * -1);
+    /* Full bleed */
+    width: calc(100% + (var(--spacing-md) * 2));
+}
+
+.full-banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Activities Restructured */
+.section-title {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.8rem;
+}
+
+.activities-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.activity-block {
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photo-placeholder-large {
+    width: 100%;
+    height: 100%;
+    background: #f1f6f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
+
+.activity-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-sm);
+}
+
+.activity-block .content {
+    padding: var(--spacing-lg);
+}
+
+.activity-block h3 {
+    color: var(--primary-dark);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.3rem;
+}
+
+.activity-block p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.detail-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.detail-tags li {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+}
+
+/* Hero Subtitle */
+.hero-simple .subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 var(--spacing-sm);
+}
+
+.social-section {
+    text-align: center;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.social-links {
+    display: flex;
+    gap: var(--spacing-sm);
+    justify-content: center;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    color: white;
+    transition: transform 0.2s;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn.kakao {
+    background: #FEE500;
+    color: #191919;
+}
+
+.social-btn:active {
+    transform: scale(0.95);
+}
+
+/* Fixed Action Bar */
+.fixed-action-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-md) var(--spacing-md) calc(var(--spacing-md) + var(--safe-area-bottom));
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0));
+    z-index: 1000;
+}
+
+.fixed-apply-btn {
+    background-color: var(--primary);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-weight: 800;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 24px rgba(31, 96, 58, 0.3);
+}
+
+.pb-fixed {
+    padding-bottom: 120px;
+    /* Space for fixed button */
+}
+
+@media (prefers-color-scheme: dark) {
+    .fixed-action-bar {
+        background: linear-gradient(to top, #0a110a 80%, rgba(10, 17, 10, 0));
+    }
+}

@@ -1,0 +1,41 @@
+:root {
+    /* Colors - IVF Green Theme */
+    --primary: #1f603a;
+    /* IVF Logo Green */
+    --primary-light: #e8f5e9;
+    --primary-dark: #144229;
+    --secondary: #f4a261;
+    /* Warm Accent */
+    --background: #fdfdfd;
+    --surface: #ffffff;
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    --border: #edf2f7;
+
+    /* Spacing */
+    --spacing-xs: 6px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 32px;
+    --spacing-xl: 48px;
+
+    /* Border Radius - Softer look */
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 28px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0f0d;
+        --surface: #141c18;
+        --text-main: #e8f5e9;
+        --text-muted: #a5b5ab;
+        --border: #1f2923;
+    }
+}

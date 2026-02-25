@@ -1,4 +1,8 @@
+/* Clear default App.css styles to use our design system instead */
 .app-container {
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
+  /* Max width for mobile view on desktop */
   margin: 0 auto;
+  position: relative;
 }
