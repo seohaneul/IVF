@@ -1,15 +1,116 @@
-import React from 'react';
-import { Users, Heart, Coffee, Tent, Info, Camera, MessageCircle, Instagram, ExternalLink } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Users, Heart, Coffee, Tent, Info, Camera, MessageCircle, Instagram, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import './Home.css';
 import logo from '../../assets/images/ivf-logo-only.png';
 import welcomeImg from '../../assets/images/activity-welcome.png';
 import studyImg from '../../assets/images/activity-bible.png';
 import mtImg from '../../assets/images/activity-mt.png';
 
+const ImageSlider = ({ images, badge }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const sliderRef = useRef(null);
+
+    const handleScroll = () => {
+        if (sliderRef.current) {
+            const { scrollLeft, clientWidth } = sliderRef.current;
+            const index = Math.round(scrollLeft / clientWidth);
+            setCurrentIndex(index);
+        }
+    };
+
+    const scrollToIndex = (index) => {
+        if (sliderRef.current) {
+            sliderRef.current.scrollTo({
+                left: index * sliderRef.current.clientWidth,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    return (
+        <div className="image-slider-container">
+            <div className="image-slider" ref={sliderRef} onScroll={handleScroll}>
+                {images.map((img, idx) => (
+                    <div key={idx} className="slider-item">
+                        {typeof img === 'string' ? (
+                            <img src={img} alt={`Slide ${idx + 1}`} />
+                        ) : (
+                            img
+                        )}
+                    </div>
+                ))}
+            </div>
+
+            <div className="activity-badge">{badge}</div>
+
+            {/* Navigation Arrows */}
+            {currentIndex > 0 && (
+                <button
+                    className="slider-nav-btn prev"
+                    onClick={() => scrollToIndex(currentIndex - 1)}
+                    aria-label="Previous slide"
+                >
+                    <ChevronLeft size={24} />
+                </button>
+            )}
+            {currentIndex < images.length - 1 && (
+                <button
+                    className="slider-nav-btn next"
+                    onClick={() => scrollToIndex(currentIndex + 1)}
+                    aria-label="Next slide"
+                >
+                    <ChevronRight size={24} />
+                </button>
+            )}
+
+            {/* Pagination Dots */}
+            <div className="slider-dots">
+                {images.map((_, idx) => (
+                    <span
+                        key={idx}
+                        className={`dot ${currentIndex === idx ? 'active' : ''}`}
+                        onClick={() => scrollToIndex(idx)}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+};
+
 const Home = () => {
-    const googleFormUrl = "https://docs.google.com/forms/d/your-id-here"; // Replace with actual URL
+    const googleFormUrl = "https://docs.google.com/forms/d/your-id-here";
     const instaUrl = "https://www.instagram.com/ivf_korea/";
     const kakaoUrl = "https://open.kakao.com/o/s-your-id";
+
+    const activities = [
+        {
+            id: 'spiritual',
+            badge: 'SPIRITUAL',
+            title: '기독교 활동 (GIBS & 기도회)',
+            desc: '깊이 있는 성경연구 프로그램인 GIBS(귀납적 성경공부)와 매일 기도로 시작하는 매기모를 통해 영적 성장을 도모합니다. 소그룹과 큰모임을 통해 말씀의 기쁨을 함께 나눕니다.',
+            tags: ['#성경공부', '#기도회', '#성경통독', '#중보기도'],
+            images: [studyImg, welcomeImg, mtImg]
+        },
+        {
+            id: 'social',
+            badge: 'SOCIAL',
+            title: '친목 & 라이프 (MT & 소모임)',
+            desc: '동아리방(동방)에서의 아늑한 일상부터 축구, 손글씨 성경, 교환독서 등 다채로운 취미 소모임이 열려 있습니다. 번개 모임과 즐거운 MT를 통해 끈끈한 공동체를 경험하세요.',
+            tags: ['#MT/번개', '#학보리', '#취미활동', '#동방일상'],
+            images: [mtImg, studyImg, welcomeImg]
+        },
+        {
+            id: 'unity',
+            badge: 'UNITY',
+            title: '연합 & 대형 활동 (수련회)',
+            desc: '전국/지부 단위의 전국 수련회(여름, 겨울)를 통해 다른 캠퍼스 동기들과 연합하며 넓은 세계관을 가집니다. 지부 연합 큰모임을 통해 연합공동체의 힘을 공유합니다.',
+            tags: ['#전국수련회', '#지부연합', '#캠퍼스연합'],
+            images: [
+                <div key="p1" className="photo-placeholder-large"><span>공동체 수련회 사진</span></div>,
+                <div key="p2" className="photo-placeholder-large" style={{ background: '#e1ede6' }}><span>연합 큰모임 사진</span></div>
+            ]
+        }
+    ];
 
     return (
         <div className="home-container fade-in">
@@ -25,86 +126,21 @@ const Home = () => {
                 </p>
             </section>
 
-            {/* Activities Restructured (Vertical list with internal Image Sliders) */}
+            {/* Activities Section */}
             <section className="activities-v2">
                 <h2 className="section-title">주요 활동 소개</h2>
-
-                <div className="activity-block">
-                    <div className="image-slider-container">
-                        <div className="image-slider">
-                            <img src={studyImg} alt="Bible Study 1" />
-                            <img src={welcomeImg} alt="Bible Study 2" />
-                            <img src={mtImg} alt="Bible Study 3" />
+                {activities.map((activity) => (
+                    <div key={activity.id} className="activity-block">
+                        <ImageSlider images={activity.images} badge={activity.badge} />
+                        <div className="content">
+                            <h3>{activity.title}</h3>
+                            <p>{activity.desc}</p>
+                            <ul className="detail-tags">
+                                {activity.tags.map((tag, i) => <li key={i}>{tag}</li>)}
+                            </ul>
                         </div>
-                        <div className="activity-badge">SPIRITUAL</div>
                     </div>
-                    <div className="content">
-                        <h3>기독교 활동 (GIBS & 기도회)</h3>
-                        <p>
-                            깊이 있는 성경연구 프로그램인 GIBS(귀납적 성경공부)와 매일 기도로
-                            시작하는 매기모를 통해 영적 성장을 도모합니다. 소그룹과 큰모임을
-                            통해 말씀의 기쁨을 함께 나눕니다.
-                        </p>
-                        <ul className="detail-tags">
-                            <li>#성경공부</li>
-                            <li>#기도회</li>
-                            <li>#성경통독</li>
-                            <li>#중보기도</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="activity-block">
-                    <div className="image-slider-container">
-                        <div className="image-slider">
-                            <img src={mtImg} alt="MT 1" />
-                            <img src={studyImg} alt="MT 2" />
-                            <img src={welcomeImg} alt="MT 3" />
-                        </div>
-                        <div className="activity-badge">SOCIAL</div>
-                    </div>
-                    <div className="content">
-                        <h3>친목 & 라이프 (MT & 소모임)</h3>
-                        <p>
-                            동아리방(동방)에서의 아늑한 일상부터 축구, 손글씨 성경, 교환독서 등
-                            다채로운 취미 소모임이 열려 있습니다. 번개 모임과 즐거운 MT를
-                            통해 끈끈한 공동체를 경험하세요.
-                        </p>
-                        <ul className="detail-tags">
-                            <li>#MT/번개</li>
-                            <li>#학보리</li>
-                            <li>#취미활동</li>
-                            <li>#동방일상</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div className="activity-block">
-                    <div className="image-slider-container">
-                        <div className="image-slider">
-                            <div className="photo-placeholder-large">
-                                <span>공동체 수련회 사진</span>
-                            </div>
-                            <div className="photo-placeholder-large" style={{ background: '#e1ede6' }}>
-                                <span>연합 큰모임 사진</span>
-                            </div>
-                        </div>
-                        <div className="activity-badge">UNITY</div>
-                    </div>
-                    <div className="content">
-                        <h3>연합 & 대형 활동 (수련회)</h3>
-                        <p>
-                            전국/지부 단위의 전국 수련회(여름, 겨울)를 통해 다른 캠퍼스
-                            동기들과 연합하며 넓은 세계관을 가집니다. 지부 연합 큰모임을
-                            통해 연합공동체의 힘을 공유합니다.
-                        </p>
-                        <ul className="detail-tags">
-                            <li>#전국수련회</li>
-                            <li>#지부연합</li>
-                            <li>#캠퍼스연합</li>
-                        </ul>
-                    </div>
-                </div>
+                ))}
             </section>
 
             {/* Social Buttons */}
