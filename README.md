@@ -1,16 +1,9 @@
-# React + Vite
+# IVF Promotional Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+이 페이지는 한국기독학생회(IVF)를 소개하고 신입생 및 관심 있는 학생들의 참여를 독려하기 위한 모바일 최적화 홍보 사이트입니다.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 주요 기능
+- **모바일 최적화 레이아웃**: 스마트폰에서 보기에 가장 편한 싱글 페이지 구성
+- **활동 소개 슬라이더**: IVF의 주요 활동(영적 성장, 기독교 활동, 연합 활동 등)을 이미지와 함께 확인 가능한 슬라이더
+- **고정 지원 버튼**: 스크롤 상태와 상관없이 하단에 고정되어 언제든 지원 페이지로 연결 가능
+- **SNS 연동**: 인스타그램 및 카카오톡 오픈채팅방 바로가기 링크 지원
