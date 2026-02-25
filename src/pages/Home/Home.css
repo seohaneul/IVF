@@ -1,5 +1,5 @@
 .home-container {
-    padding: var(--spacing-md);
+    padding: 0 var(--spacing-md) var(--spacing-md);
     max-width: 650px;
     margin: 0 auto;
     display: flex;
@@ -13,22 +13,11 @@
     padding: var(--spacing-md) 0;
 }
 
-.logo-main {
-    width: 140px;
-    margin-bottom: var(--spacing-md);
-}
-
-.hero-simple h1 {
-    font-size: 2.2rem;
-    line-height: 1.2;
-}
-
 /* Welcome Banner */
 .welcome-section {
-    width: 100%;
-    margin: 0 calc(var(--spacing-md) * -1);
-    /* Full bleed */
     width: calc(100% + (var(--spacing-md) * 2));
+    margin: 0 calc(var(--spacing-md) * -1) var(--spacing-md);
+    /* Full bleed to top and sides */
 }
 
 .full-banner-img {
@@ -47,15 +36,40 @@
 .activities-v2 {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-md);
+}
+
+.activity-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--spacing-md);
+    padding: 4px;
+    margin: 0 calc(var(--spacing-md) * -1);
+    padding: 0 var(--spacing-md);
+    -ms-overflow-style: none;
+    /* Hide scrollbar IE/Edge */
+    scrollbar-width: none;
+    /* Hide scrollbar Firefox */
+}
+
+.activity-slider::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar Chrome/Safari */
 }
 
 .activity-block {
+    flex: 0 0 calc(100% - 20px);
+    scroll-snap-align: center;
     background: white;
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border);
+}
+
+.activity-block:last-child {
+    margin-right: 0;
 }
 
 .img-wrapper {
@@ -129,9 +143,12 @@
 /* Hero Subtitle */
 .hero-simple .subtitle {
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     line-height: 1.6;
-    padding: 0 var(--spacing-sm);
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .social-section {
@@ -200,8 +217,8 @@
     box-shadow: 0 8px 24px rgba(31, 96, 58, 0.3);
 }
 
-.pb-fixed {
-    padding-bottom: 120px;
+.pb-fixed-spacer {
+    height: 120px;
     /* Space for fixed button */
 }
 
