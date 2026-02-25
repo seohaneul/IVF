@@ -10,7 +10,9 @@
 /* Hero */
 .hero-simple {
     text-align: center;
-    padding: var(--spacing-md) 0;
+    padding: 0 0 var(--spacing-md);
+    margin-top: -10px;
+    /* Bring closer to image */
 }
 
 /* Welcome Banner */
@@ -199,9 +201,9 @@
 /* Hero Subtitle */
 .hero-simple .subtitle {
     color: var(--text-muted);
-    font-size: 0.72rem;
-    /* Small enough to fit typical mobile screens on one line */
-    line-height: 1.6;
+    font-size: 1.1rem;
+    font-weight: 600;
+    line-height: 1.4;
     padding: 0;
     text-align: center;
 }

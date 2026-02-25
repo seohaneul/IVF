@@ -122,7 +122,7 @@ const Home = () => {
             {/* Hero Section */}
             <section className="hero-simple">
                 <p className="subtitle">
-                    캠퍼스와 세상 속의 하나님 나라 운동, <span className="bold">IVF</span>입니다.
+                    캠퍼스와 세상 속의 하나님 나라 운동
                 </p>
             </section>
 
