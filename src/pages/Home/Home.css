@@ -10,7 +10,9 @@
 /* Hero */
 .hero-simple {
     text-align: center;
-    padding: 4px 0 var(--spacing-md);
+    padding: 0 0 var(--spacing-md);
+    margin-top: -15px;
+    /* Pull text up further into the cropped area */
 }
 
 .hero-simple .desc-small {
@@ -29,7 +31,11 @@
 
 .full-banner-img {
     width: 100%;
-    height: auto;
+    height: 180px;
+    /* Reduced height to crop bottom */
+    object-fit: cover;
+    object-position: top;
+    /* Keep the top part and logo visible */
     display: block;
 }
 
