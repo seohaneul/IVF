@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Users, Heart, Coffee, Tent, Info, Camera, MessageCircle, Instagram, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import './Home.css';
 import logo from '../../assets/images/ivf-logo-only.png';
-import welcomeImg from '../../assets/images/activity-welcome.png';
+import bannerImg from '../../assets/images/activity-banner-new.png';
 import studyImg from '../../assets/images/activity-bible.png';
 import mtImg from '../../assets/images/activity-mt.png';
 
@@ -89,7 +89,7 @@ const Home = () => {
             title: '기독교 활동 (GIBS & 기도회)',
             desc: '깊이 있는 성경연구 프로그램인 GIBS(귀납적 성경공부)와 매일 기도로 시작하는 매기모를 통해 영적 성장을 도모합니다. 소그룹과 큰모임을 통해 말씀의 기쁨을 함께 나눕니다.',
             tags: ['#성경공부', '#기도회', '#성경통독', '#중보기도'],
-            images: [studyImg, welcomeImg, mtImg]
+            images: [studyImg, bannerImg, mtImg]
         },
         {
             id: 'social',
@@ -97,7 +97,7 @@ const Home = () => {
             title: '친목 & 라이프 (MT & 소모임)',
             desc: '동아리방(동방)에서의 아늑한 일상부터 축구, 손글씨 성경, 교환독서 등 다채로운 취미 소모임이 열려 있습니다. 번개 모임과 즐거운 MT를 통해 끈끈한 공동체를 경험하세요.',
             tags: ['#MT/번개', '#학보리', '#취미활동', '#동방일상'],
-            images: [mtImg, studyImg, welcomeImg]
+            images: [mtImg, studyImg, bannerImg]
         },
         {
             id: 'unity',
@@ -116,13 +116,13 @@ const Home = () => {
         <div className="home-container fade-in">
             {/* Welcome Image Section */}
             <section className="welcome-section">
-                <img src={welcomeImg} alt="Welcome to IVF" className="full-banner-img" />
+                <img src={bannerImg} alt="IVF Logo Banner" className="full-banner-img" />
             </section>
 
             {/* Hero Section */}
             <section className="hero-simple">
                 <p className="subtitle">
-                    우리는 캠퍼스와 세상 속에서 하나님의 통치를 실현하고자 하는 복음주의 학생운동 단체, <span className="bold">IVF</span>입니다.
+                    캠퍼스와 세상 속의 하나님 나라 운동, <span className="bold">IVF</span>입니다.
                 </p>
             </section>
 
