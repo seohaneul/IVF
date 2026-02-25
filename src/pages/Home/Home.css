@@ -36,31 +36,11 @@
 .activities-v2 {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
-}
-
-.activity-slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: var(--spacing-md);
-    padding: 4px;
-    margin: 0 calc(var(--spacing-md) * -1);
-    padding: 0 var(--spacing-md);
-    -ms-overflow-style: none;
-    /* Hide scrollbar IE/Edge */
-    scrollbar-width: none;
-    /* Hide scrollbar Firefox */
-}
-
-.activity-slider::-webkit-scrollbar {
-    display: none;
-    /* Hide scrollbar Chrome/Safari */
+    gap: var(--spacing-xl);
+    /* Back to vertical gap between blocks */
 }
 
 .activity-block {
-    flex: 0 0 calc(100% - 20px);
-    scroll-snap-align: center;
     background: white;
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -68,25 +48,37 @@
     border: 1px solid var(--border);
 }
 
-.activity-block:last-child {
-    margin-right: 0;
-}
-
-.img-wrapper {
+.image-slider-container {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
+    overflow: hidden;
 }
 
-.img-wrapper img {
+.image-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    width: 100%;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.image-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.image-slider img,
+.image-slider .photo-placeholder-large {
+    flex: 0 0 100%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    scroll-snap-align: center;
 }
 
 .photo-placeholder-large {
-    width: 100%;
-    height: 100%;
     background: #f1f6f3;
     display: flex;
     align-items: center;
@@ -106,6 +98,7 @@
     font-weight: 800;
     letter-spacing: 0.05em;
     box-shadow: var(--shadow-sm);
+    z-index: 10;
 }
 
 .activity-block .content {
