@@ -4,6 +4,9 @@ import './Home.css';
 import bannerImg from '../../assets/images/activity-banner-new.png';
 import studyImg from '../../assets/images/activity-bible.png';
 import mtImg from '../../assets/images/activity-mt.png';
+import spiritualImg1 from '../../assets/images/activity-spiritual-1.jpg';
+import spiritualImg2 from '../../assets/images/activity-spiritual-2.jpg';
+import spiritualImg3 from '../../assets/images/activity-spiritual-3.jpg';
 
 const ImageSlider = ({ images, badge }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -88,7 +91,7 @@ const Home = () => {
             title: '기독교 활동 (GIBS & 기도회)',
             desc: '깊이 있는 성경연구 프로그램인 GIBS(귀납적 성경공부)와 매일 기도로 시작하는 매기모를 통해 영적 성장을 도모합니다. 소그룹과 큰모임을 통해 말씀의 기쁨을 함께 나눕니다.',
             tags: ['#성경공부', '#기도회', '#성경통독', '#중보기도'],
-            images: [studyImg, bannerImg, mtImg]
+            images: [spiritualImg1, spiritualImg2, spiritualImg3]
         },
         {
             id: 'social',
