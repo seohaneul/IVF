@@ -97,27 +97,27 @@ const Home = () => {
     const activities = [
         {
             id: 'spiritual',
-            badge: 'SPIRITUAL',
+            badge: '영적성장',
             title: '기독교 활동 (GIBS & 기도회)',
-            desc: '깊이 있는 성경연구 프로그램인 GIBS(귀납적 성경공부)와 매일 기도로 시작하는 매기모를 통해 영적 성장을 도모합니다. 소그룹과 큰모임을 통해 말씀의 기쁨을 함께 나눕니다.',
+            desc: '성경 소모임인 GIBS와 매일 아침 기도로 시작하는 매기모를 통해 함께 신앙을 키워가요. 소그룹에서 말씀을 깊이 나누고, 큰모임에서 다 같이 모여 예배하며 말씀의 기쁨을 누리는 시간이에요.',
             tags: ['#성경공부', '#기도회', '#성경통독', '#중보기도'],
             images: [spiritualImg1, spiritualImg2, spiritualImg3]
         },
         {
             id: 'social',
-            badge: 'SOCIAL',
-            title: '친목 & 라이프 (MT & 소모임)',
-            desc: '동아리방(동방)에서의 아늑한 일상부터 축구, 손글씨 성경, 교환독서 등 다채로운 취미 소모임이 열려 있습니다. 번개 모임과 즐거운 MT를 통해 끈끈한 공동체를 경험하세요.',
+            badge: '친목 활동',
+            title: 'MT & 소모임',
+            desc: '언제든 쉴 수 있는 동아리방 일상부터 축구, 손글씨, 독서 등 하고 싶은 취미를 함께하는 소모임이 가득해요. 즐거운 MT와 번개 모임으로 금방 친해질 수 있는 따뜻한 공동체입니다.',
             tags: ['#MT/번개', '#학보리', '#취미활동', '#동방일상'],
-            images: [socialImg1, socialImg2, socialImg3, socialImg4, socialImg5]
+            images: [socialImg1, socialImg2, socialImg3, socialImg4]
         },
         {
             id: 'unity',
-            badge: 'UNITY',
-            title: '연합 & 대형 활동 (수련회)',
-            desc: '전국/지부 단위의 전국 수련회(여름, 겨울)를 통해 다른 캠퍼스 동기들과 연합하며 넓은 세계관을 가집니다. 지부 연합 큰모임을 통해 연합공동체의 힘을 공유합니다.',
+            badge: '큰모임',
+            title: '연합 & 대형 활동',
+            desc: '우리 학교를 넘어 전국의 다른 캠퍼스 친구들과 만나는 신나는 수련회가 열려요. 여름과 겨울, 함께 모여 넓은 세상을 경험하고 연합의 기쁨을 나누는 특별한 시간들을 만들어가요.',
             tags: ['#전국수련회', '#지부연합', '#캠퍼스연합'],
-            images: [unityImg1, unityImg2, unityImg3, unityImg4, unityImg5]
+            images: [socialImg5, unityImg1, unityImg2, unityImg3, unityImg4, unityImg5]
         }
     ];
 
