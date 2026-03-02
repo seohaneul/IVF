@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Users, Heart, Coffee, Tent, Info, Camera, MessageCircle, Instagram, ExternalLink, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { Users, Heart, Coffee, Tent, Info, Camera, MessageCircle, Instagram, ExternalLink, ChevronLeft, ChevronRight, Sparkles, Phone, User } from 'lucide-react';
 import './Home.css';
 import bannerImg from '../../assets/images/activity-banner-new.png';
 import studyImg from '../../assets/images/activity-bible.png';
@@ -96,7 +96,8 @@ const ImageSlider = ({ images, badge }) => {
 const Home = () => {
     const googleFormUrl = "https://docs.google.com/forms/d/your-id-here";
     const instaUrl = "https://www.instagram.com/hyu_ivf?igsh=MW0yanp2Y29nenhlaw==";
-    const kakaoUrl = "https://open.kakao.com/o/s-your-id";
+    const contactPres = { name: "대표 김예성", phone: "010-5280-5047" };
+    const contactVice = { name: "부대표 박진석", phone: "010-8810-2450" };
 
     const activities = [
         {
@@ -167,15 +168,19 @@ const Home = () => {
 
                 {/* Social Buttons */}
                 <section className="social-section">
-                    <h3 className="section-subtitle">더 많은 소식이 궁금하다면?</h3>
+                    <h3 className="section-subtitle">문의 및 더 많은 소식</h3>
                     <div className="social-links">
                         <a href={instaUrl} target="_blank" rel="noopener noreferrer" className="social-btn instagram">
                             <Instagram size={20} />
                             <span>Instagram</span>
                         </a>
-                        <a href={kakaoUrl} target="_blank" rel="noopener noreferrer" className="social-btn kakao">
-                            <MessageCircle size={20} />
-                            <span>KakaoTalk</span>
+                        <a href={`tel:${contactPres.phone}`} className="social-btn contact">
+                            <Phone size={20} />
+                            <span>{contactPres.name}</span>
+                        </a>
+                        <a href={`tel:${contactVice.phone}`} className="social-btn contact">
+                            <Phone size={20} />
+                            <span>{contactVice.name}</span>
                         </a>
                     </div>
                 </section>
