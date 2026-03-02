@@ -7,6 +7,16 @@ import mtImg from '../../assets/images/activity-mt.png';
 import spiritualImg1 from '../../assets/images/activity-spiritual-1.jpg';
 import spiritualImg2 from '../../assets/images/activity-spiritual-2.jpg';
 import spiritualImg3 from '../../assets/images/activity-spiritual-3.jpg';
+import socialImg1 from '../../assets/images/activity-social-1.jpg';
+import socialImg2 from '../../assets/images/activity-social-2.jpg';
+import socialImg3 from '../../assets/images/activity-social-3.jpg';
+import socialImg4 from '../../assets/images/activity-social-4.jpg';
+import socialImg5 from '../../assets/images/activity-social-5.jpg';
+import unityImg1 from '../../assets/images/activity-unity-1.jpg';
+import unityImg2 from '../../assets/images/activity-unity-2.jpg';
+import unityImg3 from '../../assets/images/activity-unity-3.jpg';
+import unityImg4 from '../../assets/images/activity-unity-4.jpg';
+import unityImg5 from '../../assets/images/activity-unity-5.jpg';
 
 const ImageSlider = ({ images, badge }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -99,7 +109,7 @@ const Home = () => {
             title: '친목 & 라이프 (MT & 소모임)',
             desc: '동아리방(동방)에서의 아늑한 일상부터 축구, 손글씨 성경, 교환독서 등 다채로운 취미 소모임이 열려 있습니다. 번개 모임과 즐거운 MT를 통해 끈끈한 공동체를 경험하세요.',
             tags: ['#MT/번개', '#학보리', '#취미활동', '#동방일상'],
-            images: [mtImg, studyImg, bannerImg]
+            images: [socialImg1, socialImg2, socialImg3, socialImg4, socialImg5]
         },
         {
             id: 'unity',
@@ -107,10 +117,7 @@ const Home = () => {
             title: '연합 & 대형 활동 (수련회)',
             desc: '전국/지부 단위의 전국 수련회(여름, 겨울)를 통해 다른 캠퍼스 동기들과 연합하며 넓은 세계관을 가집니다. 지부 연합 큰모임을 통해 연합공동체의 힘을 공유합니다.',
             tags: ['#전국수련회', '#지부연합', '#캠퍼스연합'],
-            images: [
-                <div key="p1" className="photo-placeholder-large"><span>공동체 수련회 사진</span></div>,
-                <div key="p2" className="photo-placeholder-large" style={{ background: '#e1ede6' }}><span>연합 큰모임 사진</span></div>
-            ]
+            images: [unityImg1, unityImg2, unityImg3, unityImg4, unityImg5]
         }
     ];
 
