@@ -122,7 +122,7 @@ const Home = () => {
             title: '연합 & 큰모임',
             desc: '우리 학교를 넘어 다른 캠퍼스 친구들과 만나는 신나는 수도권/전국 수련회가 열려요. 여름과 겨울, 함께 모여 넓은 세상을 경험하고 연합의 기쁨을 나누는 특별한 시간들을 만들어가요.',
             tags: ['#수련회', '#지부여행', '#캠퍼스연합'],
-            images: [socialImg5, unityImg1, unityImg2, unityImg3, unityImg4, unityImg5]
+            images: [unityImg1, unityImg2, unityImg3, unityImg4, unityImg5]
         }
     ];
 
