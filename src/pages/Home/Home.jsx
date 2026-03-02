@@ -7,6 +7,8 @@ import mtImg from '../../assets/images/activity-mt.png';
 import spiritualImg1 from '../../assets/images/activity-spiritual-1.jpg';
 import spiritualImg2 from '../../assets/images/activity-spiritual-2.jpg';
 import spiritualImg3 from '../../assets/images/activity-spiritual-3.jpg';
+import spiritualImg4 from '../../assets/images/activity-spiritual-4.jpg';
+import spiritualImg5 from '../../assets/images/activity-spiritual-5.jpg';
 import socialImg1 from '../../assets/images/activity-social-1.jpg';
 import socialImg2 from '../../assets/images/activity-social-2.jpg';
 import socialImg3 from '../../assets/images/activity-social-3.jpg';
@@ -101,7 +103,7 @@ const Home = () => {
             title: '기독교 활동 (GIBS & 기도회)',
             desc: '성경 소모임인 GIBS와 매일 아침 기도로 시작하는 매기모를 통해 함께 신앙을 키워가요. 소그룹에서 말씀을 깊이 나누고, 큰모임에서 다 같이 모여 예배하며 말씀의 기쁨을 누리는 시간이에요.',
             tags: ['#성경공부', '#기도회', '#성경통독', '#중보기도'],
-            images: [spiritualImg1, spiritualImg2, spiritualImg3]
+            images: [spiritualImg1, spiritualImg2, spiritualImg3, spiritualImg4, spiritualImg5]
         },
         {
             id: 'social',
