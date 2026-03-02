@@ -14,6 +14,8 @@ import socialImg2 from '../../assets/images/activity-social-2.jpg';
 import socialImg3 from '../../assets/images/activity-social-3.jpg';
 import socialImg4 from '../../assets/images/activity-social-4.jpg';
 import socialImg5 from '../../assets/images/activity-social-5.jpg';
+import socialImg6 from '../../assets/images/activity-social-6.jpg';
+import socialImg7 from '../../assets/images/activity-social-7.jpg';
 import unityImg1 from '../../assets/images/activity-unity-1.jpg';
 import unityImg2 from '../../assets/images/activity-unity-2.jpg';
 import unityImg3 from '../../assets/images/activity-unity-3.jpg';
@@ -100,25 +102,25 @@ const Home = () => {
         {
             id: 'spiritual',
             badge: '영적성장',
-            title: '기독교 활동 (GIBS & 기도회)',
-            desc: '성경 소모임인 GIBS와 매일 아침 기도로 시작하는 매기모를 통해 함께 신앙을 키워가요. 소그룹에서 말씀을 깊이 나누고, 큰모임에서 다 같이 모여 예배하며 말씀의 기쁨을 누리는 시간이에요.',
-            tags: ['#성경공부', '#기도회', '#성경통독', '#중보기도'],
+            title: 'GIBS & 매기모',
+            desc: '성경 소모임인 GIBS와 매일 오후 12시 매기모(매일 기도 모임)를 통해 함께 신앙을 키워가요. 소그룹에서 말씀을 깊이 나누고, 큰모임에서 다 같이 모여 예배하며 말씀의 기쁨을 누리는 시간이에요.',
+            tags: ['#성경공부', '#기도회', '#성경통독', '#GIBS', '#매기모'],
             images: [spiritualImg1, spiritualImg2, spiritualImg3, spiritualImg4, spiritualImg5]
         },
         {
             id: 'social',
             badge: '친목 활동',
-            title: 'MT & 소모임',
-            desc: '언제든 쉴 수 있는 동아리방 일상부터 축구, 손글씨, 독서 등 하고 싶은 취미를 함께하는 소모임이 가득해요. 즐거운 MT와 번개 모임으로 금방 친해질 수 있는 따뜻한 공동체입니다.',
-            tags: ['#MT/번개', '#학보리', '#취미활동', '#동방일상'],
-            images: [socialImg1, socialImg2, socialImg3, socialImg4]
+            title: '소그룹 & 친목',
+            desc: '언제든 쉴 수 있는 동아리방의 일상부터 축구, 손글씨, 독서 등 하고 싶은 취미를 함께하는 소모임이 가득해요. 7명 내외의 멤버들로 구성되어있는 소그룹으로 더욱 친밀해질 수 있어요. 즐거운 MT와 번개 모임으로 금방 친해질 수 있는 따뜻한 공동체입니다.',
+            tags: ['#MT/번개', '#소그룹', '#취미활동', '#동방일상'],
+            images: [socialImg1, socialImg2, socialImg3, socialImg4, socialImg5, socialImg6, socialImg7]
         },
         {
             id: 'unity',
             badge: '큰모임',
-            title: '연합 & 대형 활동',
-            desc: '우리 학교를 넘어 전국의 다른 캠퍼스 친구들과 만나는 신나는 수련회가 열려요. 여름과 겨울, 함께 모여 넓은 세상을 경험하고 연합의 기쁨을 나누는 특별한 시간들을 만들어가요.',
-            tags: ['#전국수련회', '#지부연합', '#캠퍼스연합'],
+            title: '수련회 & 여행',
+            desc: '우리 학교를 넘어 다른 캠퍼스 친구들과 만나는 신나는 수도권/전국 수련회가 열려요. 여름과 겨울, 함께 모여 넓은 세상을 경험하고 연합의 기쁨을 나누는 특별한 시간들을 만들어가요.',
+            tags: ['#수련회', '#지부여행', '#캠퍼스연합'],
             images: [socialImg5, unityImg1, unityImg2, unityImg3, unityImg4, unityImg5]
         }
     ];
