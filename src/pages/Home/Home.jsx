@@ -95,13 +95,13 @@ const ImageSlider = ({ images, badge }) => {
 
 const Home = () => {
     const googleFormUrl = "https://docs.google.com/forms/d/your-id-here";
-    const instaUrl = "https://www.instagram.com/ivf_korea/";
+    const instaUrl = "https://www.instagram.com/hyu_ivf?igsh=MW0yanp2Y29nenhlaw==";
     const kakaoUrl = "https://open.kakao.com/o/s-your-id";
 
     const activities = [
         {
             id: 'spiritual',
-            badge: '영적성장',
+            badge: '영적 성장',
             title: 'GIBS & 매기모',
             desc: '성경 소모임인 GIBS와 매일 오후 12시 매기모(매일 기도 모임)를 통해 함께 신앙을 키워가요. 소그룹에서 말씀을 깊이 나누고, 큰모임에서 다 같이 모여 예배하며 말씀의 기쁨을 누리는 시간이에요.',
             tags: ['#성경공부', '#기도회', '#성경통독', '#GIBS', '#매기모'],
@@ -117,8 +117,8 @@ const Home = () => {
         },
         {
             id: 'unity',
-            badge: '큰모임',
-            title: '수련회 & 여행',
+            badge: '대형 활동',
+            title: '연합 & 큰모임',
             desc: '우리 학교를 넘어 다른 캠퍼스 친구들과 만나는 신나는 수도권/전국 수련회가 열려요. 여름과 겨울, 함께 모여 넓은 세상을 경험하고 연합의 기쁨을 나누는 특별한 시간들을 만들어가요.',
             tags: ['#수련회', '#지부여행', '#캠퍼스연합'],
             images: [socialImg5, unityImg1, unityImg2, unityImg3, unityImg4, unityImg5]
