@@ -166,22 +166,25 @@ const Home = () => {
                     ))}
                 </section>
 
-                {/* Social Buttons */}
+                {/* Social Buttons & Contacts */}
                 <section className="social-section">
-                    <h3 className="section-subtitle">문의 및 더 많은 소식</h3>
-                    <div className="social-links">
-                        <a href={instaUrl} target="_blank" rel="noopener noreferrer" className="social-btn instagram">
+                    <div className="instagram-box">
+                        <a href={instaUrl} target="_blank" rel="noopener noreferrer" className="social-btn instagram-full">
                             <Instagram size={20} />
-                            <span>Instagram</span>
+                            <span>한양대 IVF 인스타그램 보러가기</span>
                         </a>
-                        <a href={`tel:${contactPres.phone}`} className="social-btn contact">
-                            <Phone size={20} />
-                            <span>{contactPres.name}</span>
-                        </a>
-                        <a href={`tel:${contactVice.phone}`} className="social-btn contact">
-                            <Phone size={20} />
-                            <span>{contactVice.name}</span>
-                        </a>
+                    </div>
+
+                    <div className="contact-text-box">
+                        <h3 className="contact-title">가입 및 기타 문의</h3>
+                        <div className="contact-item">
+                            <span className="label">{contactPres.name}</span>
+                            <a href={`tel:${contactPres.phone}`} className="phone-link">{contactPres.phone}</a>
+                        </div>
+                        <div className="contact-item">
+                            <span className="label">{contactVice.name}</span>
+                            <a href={`tel:${contactVice.phone}`} className="phone-link">{contactVice.phone}</a>
+                        </div>
                     </div>
                 </section>
 
