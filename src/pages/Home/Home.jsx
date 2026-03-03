@@ -94,7 +94,7 @@ const ImageSlider = ({ images, badge }) => {
 };
 
 const Home = () => {
-    const googleFormUrl = "https://docs.google.com/forms/d/your-id-here";
+    const googleFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSehQjdPRo9NBInmuEDU9RC5f22uWKkDVFnv2eP4dAj08m9CyA/viewform?usp=publish-editor";
     const instaUrl = "https://www.instagram.com/hyu_ivf?igsh=MW0yanp2Y29nenhlaw==";
     const contactPres = { name: "대표 김예성", phone: "010-5280-5047" };
     const contactVice = { name: "부대표 박진석", phone: "010-8810-2450" };
